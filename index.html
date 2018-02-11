@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Test page</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link rel="stylesheet" type="text/css" href="font/flaticon.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row mt-3" id="top">
+            <div class="col-md-3">
+                    <div class="leftfloat mr-2">
+                        <i class="fas fa-map-marker-alt mt-1"></i>
+                    </div>
+                    <div>
+                        <p class="toptext"> +7 (7232) 246-47-18 <br> г.Усть-Каменогорск
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="leftfloat mr-2">
+                        <i class="fas fa-map-marker-alt mt-1"> </i>
+                    </div>
+                    <div>
+                        <p class="toptext"> +7 (7232) 246-47-18 <br> г.Алматы
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-3">
+                <div class="leftfloat mr-2">
+                        <i class="fas fa-map-marker-alt mt-1"> </i>
+                    </div>
+                    <div>
+                        <p class="toptext"> +7 (7232) 246-47-18 <br> г.Астана
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-1 offset-md-2 whiteclr" id="login">
+                <a class="btn btn-warning"><i class="fas fa-user mr-2"></i> Вход</a>
+            </div>
+            <img src="img/line.png" alt="bottom line" class="line"> 
+        </div>
+
+
+        <div class="row" id="mid">
+           <div class="col-md-5 ">
+            <img src="img/logohor.png" alt="logo" class="logo">
+           </div>
+            <div class="col-md-3 offset-md-1 text-right align-self-center">
+                Республика Казахстан <br>
+                Восточно-Казахстанская область <br>
+                г. Усть-Каменогорск,<br>
+                Набережная Славского, 14, 2 этаж
+            </div>
+            <div class="col-md-3 align-self-center">
+             <img src="img/logo2.png" alt="logo2" class="logo">   
+            </div>
+        </div>
+
+        <div class="row" id="main">
+            <div class="col-md-8">
+                <div class="row" id="rect">
+                   
+                    <div class="col-md-7">
+                    <p class="whiteclr">Сортировать по:
+                    <a href="#" class="sortbtn"><i class="flaticon-sort-1 sortbtn"></i></a>
+                    <a href="#" class="sortbtn"><i class="flaticon-sort sortbtn"></i></a>
+                    <a href="#" class="sortbtn"><i class="flaticon-sort-2 sortbtn"></i></a>
+                    </p>                    
+                    </div>
+                    
+                    <div class="col-md-5 pl-5 align-items-center">
+                    <p class="greytext"><input id="filterWord" placeholder="Филтр по заголовку:">
+                    <a id="filterKey"><i class="fas fa-chevron-circle-right"></i></a>
+                    </p>
+                    </div>
+                </div>
+                <div class="row" id="blocks">
+                   <div class="container">
+                   
+                    <div class="row align-items-center my-5 itemDiv" v-for="item in items">
+                       
+                        <div class="col-md-4 justify-content-center align-items-center itemImage">
+                        <img src="img/block.jpg">
+                        </div>
+                        
+                        <div class="col-md-8 pl-5 itemBody">
+                           <div class="row align-items-center">
+                               <i class="fas fa-dollar-sign"></i>
+                               <h1 class="price pl-2 pb-3">{{item.price}} тг.</h1>                               
+                           </div>
+                           <div class="row">
+                               <h4>{{item.title}}</h4>
+                           </div>
+                           <div class="row">
+                               <p>{{item.body}}</p>
+                           </div>
+                           <div class="row align-items-center">
+                               <h2><i class="fas fa-mobile-alt greytext mr-3"></i></h2>
+                               <h3> 8-<a class="greytext showPhone">Показать телефон<span hidden>{{item.id}}</span><div class="loader"></div></a></h3>
+                           </div>
+                            
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+                
+                
+                <div id="data">
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="container " id="right">
+                    <div class="row justify-content-center">
+                        <a href="#" target="_blank" class="rightBlocks">
+                        <div class="card mt-3" style="width: 18rem;">
+                          <img class="card-img-top" src="img/block.jpg" alt="Block image">
+                          <div class="card-body">
+                            <p class="card-text text-center">Заголовок материала.</p>
+                          </div>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="row justify-content-center">
+                       <a href="#" target="_blank" class="rightBlocks">
+                        <div class="card mt-3" style="width: 18rem;">
+                          <img class="card-img-top" src="img/block.jpg" alt="Block image">
+                          <div class="card-body">
+                            <p class="card-text text-center">Заголовок материала.</p>
+                          </div>
+                        </div> 
+                        </a>                       
+                    </div>
+                    <div class="row justify-content-center">
+                       <a href="#" target="_blank" class="rightBlocks">
+                        <div class="card my-3" style="width: 18rem;">
+                          <img class="card-img-top" src="img/block.jpg" alt="Block image">
+                          <div class="card-body">
+                            <p class="card-text text-center">Заголовок материала.</p>
+                          </div>
+                        </div> 
+                        </a>                       
+                    </div>                                                           
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+var url = "http://api.idregion.kz/getlist?token=b662ea446b09ddbad44788f246c5e33b&limit=5&offset=5";
+        
+var jsonArray = $.parseJSON($.ajax({
+        url: url,
+        async: false,
+        type: 'GET',
+
+        error : function(jqXHR, textStatus, errorThrown) {
+                var errorMessage = "jqXHR: " + jqXHR + "textStatus: " + textStatus + "errorThrown : " + errorThrown;
+                alert(errorMessage);                                                         },
+    }).responseText);        
+
+function numberGrouping(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+        
+var items = jsonArray.length;
+var i = 0;
+        
+while(i<items){
+var num = jsonArray[i]["price"];
+  jsonArray[i]["price"] = numberGrouping(num);
+i++;
+}        
+        
+        
+//sort from the cheapest        
+$(".flaticon-sort-1").on("click", function(){
+    jsonArray.sort(function(a, b) {
+    return parseFloat(a.price) - parseFloat(b.price);
+});
+});
+
+//sort from the most espensive
+$(".flaticon-sort").on("click", function(){
+    jsonArray.sort(function(a, b) {
+    return parseFloat(b.price) - parseFloat(a.price);
+});
+});        
+        
+        
+var app = new Vue({
+    el: "#blocks",
+    data: {
+        items: jsonArray
+    }
+});
+        
+$(".showPhone").on("click", function(){
+    
+    var thisLoader = $(this).find(".loader");
+    $(this).find(".loader").css("display", "block"); //show preloader
+    var thisShowPhone = $(this);
+    
+function testFunc(){
+    var id = thisShowPhone.children("span").html();
+    var phoneUrl = 'http://api.idregion.kz/getphone?token=b662ea446b09ddbad44788f246c5e33b&nid=' + id;
+    var jsonArray2 = $.parseJSON($.ajax({
+        url: phoneUrl,
+        async: false,
+        type: 'GET',
+
+        error : function(jqXHR, textStatus, errorThrown) {
+                var errorMessage = "jqXHR: " + jqXHR + "textStatus: " + textStatus + "errorThrown : " + errorThrown;
+                alert(errorMessage);                                                         },
+    }).responseText);
+    var lengthNo = jsonArray2.length;
+    var phoneMessage = "";
+    var i = 0;
+    function phoneNumbers() {
+        while (lengthNo > 0) {
+            if(phoneMessage == ""){
+                phoneMessage = jsonArray2[i];
+            } else {
+            phoneMessage += ", " + jsonArray2[i];
+            }
+            i++;
+            lengthNo--;
+            
+        }
+        return phoneMessage;
+    }
+    
+    phoneMessage = phoneNumbers();
+    
+    thisShowPhone.html(phoneMessage);
+    thisShowPhone.off("click");
+    thisShowPhone.removeAttr("href");
+    //thisShowPhone.css("opacity", "1");
+    thisShowPhone.css({ "opacity": "1", "font-size": "1em" });
+    }
+    
+  setTimeout(function(){ 
+    thisLoader.css("display", "none"); ////hide preloader
+    testFunc();
+  }, 1000);
+    
+});
+        
+$("input").keyup(function() {
+  var filter = $("input").val();
+  
+  if(filter != ""){
+  app.items = app.items.filter(function(item) {
+    return item.title.match(filter);
+  });
+} else {
+  history.go(0);  
+}
+});        
+
+    </script>
+</body>
+
+</html>
